@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pulau Maluku - Wisata Daerah | Eksplorin</title>
+
+    <!-- Bootstrap -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="../css/wisata_daerah_out.css" />
+
+    <!-- Fontawesome -->
+    <!-- CDN Fontawesome -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    /> -->
+    <!-- Offline Fontawesome -->
+    <link rel="stylesheet" href="../css/fontawesome/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../img/favicon/site.webmanifest" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-logo" href="../index.html">
+          <img src="../../img/Logo Eksplorin.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../jelajahi.html"
+                >Jelajahi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../wisata_daerah.html"
+                >Wisata Daerah</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../tentang.html"
+                >Tentang</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../kontak.html"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input
+                type="text"
+                class="form-control input-lg"
+                id="navInput"
+                placeholder="Cari Wisata"
+                oninput="search()"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </span>
+
+              <ul id="searchResult"></ul>
+              <div id="noResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-wrapper">
+      <h6>Wisata Daerah / Pulau Maluku</h6>
+      <a class="back" href="../wisata_daerah.html">
+        <i class="fa-solid fa-chevron-left"></i>
+        Kembali
+      </a>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Batu Angus.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Batu Angus</h6>
+          <p>Ternate</p>
+          <a href="maluku/batu_angus.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Benteng Amsterdam.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Benteng Amsterdam</h6>
+          <p>Maluku</p>
+          <a href="maluku/benteng_amsterdam.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Benteng Belgica.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Benteng Belgica</h6>
+          <p>Maluku</p>
+          <a href="maluku/benteng_belgica.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Benteng Tolukko - 1.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Benteng Tolukko</h6>
+          <p>Ternate</p>
+          <a href="maluku/benteng_tolukko.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Danau Ngade.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Danau Ngade</h6>
+          <p>Ternate</p>
+          <a href="maluku/danau_ngade.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Danau Tolire Besar.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Danau Tolire Besar</h6>
+          <p>Ternate</p>
+          <a href="maluku/danau_tolire_besar.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Pantai Jikomalamo.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Pantai Jikomalamo</h6>
+          <p>Ternate</p>
+          <a href="maluku/pantai_jikomalamo.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Pantai Natsepa.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Pantai Natsepa</h6>
+          <p>Maluku</p>
+          <a href="maluku/pantai_natsepa.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Pantai Sulamadaha.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Pantai Sulamadaha</h6>
+          <p>Ternate</p>
+          <a href="maluku/pantai_sulamadaha.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Pulau Maitara - 1.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Pulau Maitara</h6>
+          <p>Tidore</p>
+          <a href="maluku/pulau_maitara.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="../img/Taman Pattimura.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h6>Taman Pattimura</h6>
+          <p>Ambon</p>
+          <a href="maluku/taman_pattimura.html">
+            Selengkapnya
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="../index.html">
+              <img src="../img/Logo Ekslorin - White.png" alt="" />
+              <h2>Eksplorin</h2>
+            </a>
+          </div>
+          <div class="footer-lcenter">
+            <ul>
+              <span>Menu Eksplorin</span>
+              <li><a href="../index.html">Beranda</a></li>
+              <li><a href="../jelajahi.html">Jelajahi</a></li>
+              <li><a href="../wisata_daerah.html">Wisata Daerah</a></li>
+              <li><a href="../tentang.html">Tentang</a></li>
+              <li><a href="../kontak.html">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-rcenter">
+            <ul>
+              <span>Kategori Wisata</span>
+              <li><a href="../jelajahi.html">Pantai</a></li>
+              <li><a href="../jelajahi.html">Pulau</a></li>
+              <li><a href="../jelajahi.html">Pegunungan</a></li>
+              <li><a href="../jelajahi.html">Sejarah</a></li>
+              <li><a href="../jelajahi.html">Taman</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <ul>
+              <span>Hubungi Kami</span>
+              <li>
+                <a href="mailto:eksplorinid@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>eksplorinid@gmail.com</p>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+0411865677">
+                  <i class="fa fa-phone"></i>
+                  <p>(0411)865677</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                    Jalan Daeng Tata Raya Parang Tambung, Mannuruki, Kec.
+                    Tamalate, Kota Makassar, Sulawesi Selatan 90224</a
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2024 Created by Technocrates</p>
+          <div class="socmed-eksplorin">
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/eksplorin_id"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.x.com/"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CDN Bootstrap -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- Offline Bootstrap -->
+    <script src="../js/bootstrap/bootstrap.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/lokasi.js"></script>
+    <script src="../js/navbar-search-wisata.js"></script>
+    <!--   *****   JQuery Link   *****   -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jelajahi | Eksplorin</title>
+
+    <!-- Bootstrap -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/jelajahi.css" />
+
+    <!-- Fontawesome -->
+    <!-- CDN Fontawesome -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    /> -->
+    <!-- Offline Fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-logo" href="index.html">
+          <img src="img/Logo Eksplorin.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="jelajahi.html"
+                >Jelajahi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="wisata_daerah.html"
+                >Wisata Daerah</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="tentang.html"
+                >Tentang</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="kontak.html"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input
+                type="text"
+                class="form-control input-lg"
+                id="navInput"
+                placeholder="Cari Wisata"
+                oninput="search()"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </span>
+
+              <ul id="searchResult"></ul>
+              <div id="noResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="top-wrapper">
+      <h6>Beranda / Jelajahi</h6>
+    </div>
+
+    <div class="kategori-wrapper">
+      <div class="kategori-container">
+        <section class="aside">
+          <div class="aside-container">
+            <div class="aside-searchbar">
+              <div id="aside-search-input">
+                <div class="input-group col-md-12">
+                  <input
+                    type="text"
+                    class="form-control input-lg"
+                    id="searchInput"
+                    placeholder="Cari Wisata"
+                    onkeyup="searchData()"
+                  />
+                  <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="button">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="aside-dropdown">
+              <span class="dropdown-title">Kategori</span>
+              <select
+                id="filterSelect"
+                onchange="filterData()"
+                class="form-select"
+              >
+                <option value="semua">Semua</option>
+                <option value="pantai" id="pantai">Pantai</option>
+                <option value="pulau" id="pulau">Pulau</option>
+                <option value="pegunungan" id="pegunungan">Pegunungan</option>
+                <option value="sejarah" id="sejarah">Sejarah</option>
+                <option value="taman" id="taman">Taman</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="konten">
+          <div class="card-content">
+            <div class="card" data-name="Taman Komodo" data-category="taman">
+              <div class="card-image">
+                <img src="./img/Taman Komodo - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Komodo</h6>
+                <p>Nusa Tenggara Timur</p>
+                <a href="jelajahi/taman_komodo.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Gunung Bromo"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Gunung Bromo - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pegunungan Bromo</h6>
+                <p>Jawa Timur</p>
+                <a href="jelajahi/gunung_bromo.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Fort Rotterdam"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Fort Rotterdam - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Fort Rotterdam</h6>
+                <p>Sulawesi Selatan</p>
+                <a href="jelajahi/fort_rotterdam.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Bunaken" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Bunaken - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Bunaken</h6>
+                <p>Sulawesi Utara</p>
+                <a href="jelajahi/pulau_bunaken.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Kuta" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Kuta - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Kuta</h6>
+                <p>Bali</p>
+                <a href="jelajahi/pantai_kuta.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Pandawa" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Pandawa - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Pandawa</h6>
+                <p>Bali</p>
+                <a href="jelajahi/pantai_pandawa.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Pink" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Pink - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Pink</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/pantai_pink.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Kawah Ijen" data-category="pegunungan">
+              <div class="card-image">
+                <img src="./img/Kawah Ijen - 1.webp" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Kawah Ijen</h6>
+                <p>Jawa Timur</p>
+                <a href="jelajahi/kawah_ijen.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Candi Prambanan"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Candi Prambanan - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Candi Prambanan</h6>
+                <p>Daerah Istimewa Yogyakarta</p>
+                <a href="jelajahi/candi_prambanan.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Candi Borobudur"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Borobudur - 1.png" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Candi Borobudur</h6>
+                <p>Jawa Tengah</p>
+                <a href="jelajahi/candi_borobudur.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Nusa Penida" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Nusa Penida - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Nusa Penida</h6>
+                <p>Bali</p>
+                <a href="jelajahi/nusa_penida.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pronosutan View"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Nanggulan - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pronosutan View</h6>
+                <p>Daerah Istimewa Yogyakarta</p>
+                <a href="jelajahi/pronosutan_view.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Bukit Dlingo"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Bukit Dlingo - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Bukit Panguk</h6>
+                <p>Daerah Istimewa Yogyakarta</p>
+                <a href="jelajahi/bukit_panguk.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Gunung Rinjani"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Gunung Rinjani - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Gunung Rinjani</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/gunung_rinjani.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Gunung Leuser"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Gunung Leuser - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Gunung Leuser</h6>
+                <p>Aceh</p>
+                <a href="jelajahi/taman_nasional_gunung_leuser.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Lampuuk" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Lampuuk - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Lampuuk</h6>
+                <p>Aceh</p>
+                <a href="jelajahi/pantai_lampuuk.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Kemala" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Kemala.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Kemala</h6>
+                <p>Kalimantan Timur</p>
+                <a href="jelajahi/pantai_kemala.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Bukit Jokowi"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Bukit Jokowi.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Bukit Jokowi</h6>
+                <p>Papua</p>
+                <a href="jelajahi/bukit_jokowi.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Base-G" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Base-G.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Base-G</h6>
+                <p>Papua</p>
+                <a href="jelajahi/pantai_base-g.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Teluk Cendrawasih"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Teluk Cendrawasih.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Teluk Cendrawasih</h6>
+                <p>Papua Barat</p>
+                <a href="jelajahi/taman_nasional_teluk_cendrawasih.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Maitara" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Maitara - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Maitara</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/pulau_maitara.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pantai Jikomalamo"
+              data-category="pantai"
+            >
+              <div class="card-image">
+                <img src="./img/Pantai Jikomalamo.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Jikomalamo</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/pantai_jikomalamo.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Danau Ngade" data-category="lainnya">
+              <div class="card-image">
+                <img src="./img/Danau Ngade.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Danau Ngade</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/danau_ngade.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Raja Ampat" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Raja Ampat - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Raja Ampat</h6>
+                <p>Papua Barat</p>
+                <a href="jelajahi/raja_ampat.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Lorentz"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Lorentz.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Lorentz</h6>
+                <p>Papua</p>
+                <a href="jelajahi/taman_nasional_lorentz.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Wakatobi"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Wakatobi.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Wakatobi</h6>
+                <p>Sulawesi Tenggara</p>
+                <a href="jelajahi/taman_nasional_wakatobi.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Keraton Buton"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Keraton Buton.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Keraton Buton</h6>
+                <p>Sulawesi Tenggara</p>
+                <a href="jelajahi/benteng_keraton_buton.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Tolukko"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Tolukko - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Tolukko</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/benteng_tolukko.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pantai Pasir Panjang"
+              data-category="pantai"
+            >
+              <div class="card-image">
+                <img src="./img/Pantai Pasir Panjang.jpeg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Pasir Panjang</h6>
+                <p>Kalimantan Barat</p>
+                <a href="jelajahi/pantai_pasir_panjang.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card garuda"
+              data-name="Taman Garuda Wisnu Kencana"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Garuda Wisnu Kencana - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Budaya Garuda Wisnu Kencana</h6>
+                <p>Bali</p>
+                <a href="jelajahi/taman_budaya_garuda_wisnu_kencana.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Air Terjun Banyumala"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Air Terjun Banyumala - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Air Terjun Banyumala</h6>
+                <p>Bali</p>
+                <a href="jelajahi/air_terjun_banyumala.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pura Besakih" data-category="sejarah">
+              <div class="card-image">
+                <img src="./img/Pura Besakih - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pura Besakih</h6>
+                <p>Bali</p>
+                <a href="jelajahi/pura_besakih.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Labuan Bajo" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Labuan Bajo - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Labuan Bajo</h6>
+                <p>Nusa Tenggara Timur</p>
+                <a href="jelajahi/labuan_bajo.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Gunung Rinjani"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Rinjani - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Gunung Rinjani</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/taman_rinjani.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Lawang Sewu" data-category="sejarah">
+              <div class="card-image">
+                <img src="./img/Lawang Sewu - 2.jpeg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Lawang Sewu</h6>
+                <p>Jawa Tengah</p>
+                <a href="jelajahi/lawang_sewu.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pulau Karampuang"
+              data-category="pulau"
+            >
+              <div class="card-image">
+                <img src="./img/Pulau Karampuang.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Karampuang</h6>
+                <p>Sulawesi Barat</p>
+                <a href="jelajahi/pulau_karampuang.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Puncak Bulo"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Negeri di atas Awan.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Puncak Bulo</h6>
+                <p>Sulawesi Barat</p>
+                <a href="jelajahi/puncak_bulo.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Amsterdam"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Amsterdam.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Amsterdam</h6>
+                <p>Maluku</p>
+                <a href="jelajahi/benteng_amsterdam.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pantai Sulamadaha"
+              data-category="pantai"
+            >
+              <div class="card-image">
+                <img src="./img/Pantai Sulamadaha.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Sulamadaha</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/pantai_sulamadaha.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Batu Angus" data-category="pegunungan">
+              <div class="card-image">
+                <img src="./img/Batu Angus.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Batu Angus</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/batu_angus.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Bakaro" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Bakaro.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Bakaro</h6>
+                <p>Papua Barat</p>
+                <a href="jelajahi/pantai_bakaro.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Wisata Alam Sorong"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Wisata Alam Sorong.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Wisata Alam Sorong</h6>
+                <p>Papua Barat</p>
+                <a href="jelajahi/taman_wisata_alam_sorong.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Bukit Merese"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Bukit Merese - 1.png" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Bukit Merese</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/bukit_merese.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Bukit Selong"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Bukit Selong - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Bukit Selong</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/bukit_selong.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Air Terjun Sendang Gile"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Sendang Gile - 1.webp" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Air Terjun Sendang Gile</h6>
+                <p>Nusa Tenggara Barat</p>
+                <a href="jelajahi/air_terjun_sendang_gile.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Safari Indonesia Bogor"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Safari Bogor - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Safari Indonesia Bogor</h6>
+                <p>Jawa Barat</p>
+                <a href="jelajahi/taman_safari_indonesia_bogor.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Dataran Tinggi Dieng"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Dataran Tinggi Dieng - 2.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Dataran Tinggi Dieng</h6>
+                <p>Jawa Tengah</p>
+                <a href="jelajahi/dataran_tinggi_dieng.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Kota Lama Semarang"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Kota Lama Semarang - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Kota Lama Semarang</h6>
+                <p>Jawa Tengah</p>
+                <a href="jelajahi/kota_lama_semarang.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Jatim Park 2" data-category="taman">
+              <div class="card-image">
+                <img src="./img/Jatim Park 2 - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Jatim Park 2</h6>
+                <p>Jawa Timur</p>
+                <a href="jelajahi/jatim_park_2.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Air Terjun Sipiso-piso"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Air Terjun Sipiso-piso - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Air Terjun Sipiso-piso</h6>
+                <p>Sumatera Utara</p>
+                <a href="jelajahi/air_terjun_sipiso-piso.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Tjong A Fie Mansion"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Tjong A Fie Mansion - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Tjong A Fie Mansion</h6>
+                <p>Sumatera Utara</p>
+                <a href="jelajahi/tjong_a_fie_mansion.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Perkebunan Teh Kayu Aro"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Perkebunan Teh Kayu Aro - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Perkebunan Teh Kayu Aro</h6>
+                <p>Jambi</p>
+                <a href="jelajahi/perkebunan_teh_kayu_aro.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Gunung Kerinci"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Gunung Kerinci - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Gunung Kerinci</h6>
+                <p>Sumatera Barat</p>
+                <a href="jelajahi/gunung_kerinci.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Gunung Bukit Raya"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Gunung Bukit Raya.jpeg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Gunung Bukit Raja</h6>
+                <p>Kalimantan Tengah</p>
+                <a href="jelajahi/gunung_bukit_raja.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Monumen Nosarara Nosabatutu"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Monumen Nosarara Nosabatutu.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Monumen Nosarara Nosabatutu</h6>
+                <p>Sulawesi Tengah</p>
+                <a href="jelajahi/monumen_nosarara_nosabatutu.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Otanaha"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Otanaha.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Otanaha</h6>
+                <p>Gorontalo</p>
+                <a href="jelajahi/benteng_otanaha.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Losari" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Losari.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Losari</h6>
+                <p>Sulawesi Selatan</p>
+                <a href="jelajahi/pantai_losari.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Bantimurung"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Bantimurung.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Bantimurung</h6>
+                <p>Sulawesi Selatan</p>
+                <a href="jelajahi/taman_nasional_bantimurung.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pantai Natsepa" data-category="pantai">
+              <div class="card-image">
+                <img src="./img/Pantai Natsepa.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Natsepa</h6>
+                <p>Maluku</p>
+                <a href="jelajahi/pantai_natsepa.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Taman Pattimura" data-category="taman">
+              <div class="card-image">
+                <img src="./img/Taman Pattimura.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Pattimura</h6>
+                <p>Maluku</p>
+                <a href="jelajahi/taman_pattimura.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Jembatan Gentala Arasy"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Jembatan Pedestrian.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Jembatan Gentala Arasy</h6>
+                <p>Jambi</p>
+                <a href="jelajahi/jembatan_gentala_arasy.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Gunung Meratus"
+              data-category="pegunungan"
+            >
+              <div class="card-image">
+                <img src="./img/Gunung Meratus.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Gunung Meratus</h6>
+                <p>Kalimantan Selatan</p>
+                <a href="jelajahi/gunung_meratus.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Tanjung Puting"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Tanjung Puting.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Tanjung Puting</h6>
+                <p>Kalimantan Tengah</p>
+                <a href="jelajahi/taman_nasional_tanjung_puting.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Maratua" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Maratua - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Maratua</h6>
+                <p>Kalimantan Timur</p>
+                <a href="jelajahi/pulau_maratua.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Candi Muara Takus"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Candi Muara Takus - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Candi Muara Takus</h6>
+                <p>Riau</p>
+                <a href="jelajahi/candi_muara_takus.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Istana Basa Pagaruyung"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Istana Basa Pagaruyung - 1.jpeg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Istano Basa Pagaruyung</h6>
+                <p>Sumatera Barat</p>
+                <a href="jelajahi/istano_basa_pagaruyung.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Marlborough"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Marlborough - 1.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Marlborough</h6>
+                <p>Bengkulu</p>
+                <a href="jelajahi/benteng_marlborough.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Pantai Parangtritis"
+              data-category="pantai"
+            >
+              <div class="card-image">
+                <img src="./img/Pantai Parangtritis - 1.jpeg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pantai Parangtritis</h6>
+                <p>Daerah Istimewa Yogyakarta</p>
+                <a href="jelajahi/pantai_parangtritis.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Khatulistiwa"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Khatulistiwa.JPG" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Khatulistiwa</h6>
+                <p>Kalimantan Barat</p>
+                <a href="jelajahi/taman_khatulistiwa.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Benteng Belgica"
+              data-category="sejarah"
+            >
+              <div class="card-image">
+                <img src="./img/Benteng Belgica.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Benteng Belgica</h6>
+                <p>Maluku</p>
+                <a href="jelajahi/benteng_belgica.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Danau Tolire Besar"
+              data-category="lainnya"
+            >
+              <div class="card-image">
+                <img src="./img/Danau Tolire Besar.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Danau Tolire Besar</h6>
+                <p>Maluku Utara</p>
+                <a href="jelajahi/danau_tolire_besar.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div
+              class="card"
+              data-name="Taman Nasional Lore Lindu"
+              data-category="taman"
+            >
+              <div class="card-image">
+                <img src="./img/Taman Nasional Lore Lindu.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Taman Nasional Lore Lindu</h6>
+                <p>Sulawesi Tengah</p>
+                <a href="jelajahi/taman_nasional_lore_lindu.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Sangalaki" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Sangalaki.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Sangalaki</h6>
+                <p>Kalimantan Timur</p>
+                <a href="jelajahi/pulau_sangalaki.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Kakaban" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Kakaban.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Kakaban</h6>
+                <p>Kalimantan Timur</p>
+                <a href="jelajahi/pulau_kakaban.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="card" data-name="Pulau Derawan" data-category="pulau">
+              <div class="card-image">
+                <img src="./img/Pulau Derawan.jpg" alt="" />
+              </div>
+              <div class="card-info">
+                <h6>Pulau Derawan</h6>
+                <p>Kalimantan Timur</p>
+                <a href="jelajahi/pulau_derawan.html">
+                  Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="pagination" class="category-selected">
+            <li class="page-item previous-page disable">
+              <a class="page-link" href="#">Prev</a>
+            </li>
+            <li class="page-item current-page active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item dots">
+              <a class="page-link" href="#">...</a>
+            </li>
+            <li class="page-item current-page">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item current-page">
+              <a class="page-link" href="#">6</a>
+            </li>
+            <li class="page-item dots">
+              <a class="page-link" href="#">...</a>
+            </li>
+            <li class="page-item current-page">
+              <a class="page-link" href="#">10</a>
+            </li>
+            <li class="page-item next-page">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="./index.html">
+              <img src="./img/Logo Ekslorin - White.png" alt="" />
+              <h2>Eksplorin</h2>
+            </a>
+          </div>
+          <div class="footer-lcenter">
+            <ul>
+              <span>Menu Eksplorin</span>
+              <li><a href="./index.html">Beranda</a></li>
+              <li><a href="./jelajahi.html">Jelajahi</a></li>
+              <li><a href="./wisata_daerah.html">Wisata Daerah</a></li>
+              <li><a href="./tentang.html">Tentang</a></li>
+              <li><a href="./kontak.html">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-rcenter">
+            <ul>
+              <span>Kategori Wisata</span>
+              <li><a href="./jelajahi.html">Pantai</a></li>
+              <li><a href="./jelajahi.html">Pulau</a></li>
+              <li><a href="./jelajahi.html">Pegunungan</a></li>
+              <li><a href="./jelajahi.html">Sejarah</a></li>
+              <li><a href="./jelajahi.html">Taman</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <ul>
+              <span>Hubungi Kami</span>
+              <li>
+                <a href="mailto:eksplorinid@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>eksplorinid@gmail.com</p>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+0411865677">
+                  <i class="fa fa-phone"></i>
+                  <p>(0411)865677</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                    Jalan Daeng Tata Raya Parang Tambung, Mannuruki, Kec.
+                    Tamalate, Kota Makassar, Sulawesi Selatan 90224</a
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2024 Created by Technocrates</p>
+          <div class="socmed-eksplorin">
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/eksplorin_id"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.x.com/"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CDN Bootstrap -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- Offline Bootstrap -->
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navbar-search.js"></script>
+
+    <!--   *****   JQuery Link   *****   -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      charset="utf-8"
+    ></script>
+
+    <!-- Pagination -->
+    <script src="js/pagination.js"></script>
+  </body>
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Bingung mau kemana? Eksplorin aja" />
+    <title>Eksplorin - Temani Petualanganmu!</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="css/bootstrap/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Owl Carousel Rekomendasi -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-logo" href="index.html">
+          <img src="img/Logo Eksplorin.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="jelajahi.html"
+                >Jelajahi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="wisata_daerah.html"
+                >Wisata Daerah</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="tentang.html"
+                >Tentang</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="kontak.html"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input
+                type="text"
+                class="form-control input-lg"
+                id="navInput"
+                placeholder="Cari Wisata"
+                oninput="search()"
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-info btn-lg" type="button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </span>
+
+              <ul id="searchResult"></ul>
+              <div id="noResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-wrapper">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h5>SELAMAT DATANG DI EKSPLORIN</h5>
+          <h1>Temukan keindahan di Indonesia yang memanjakan mata.</h1>
+          <p>
+            Eksplorin membantu kamu untuk melakukan perjalanan <br />
+            wisata dan petualangan yang menarik serta seru di Indonesia.
+          </p>
+        </div>
+
+        <a href="#keindahan-wrapper" class="hero-btn">
+          Jelajahi
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="keindahan-wrapper" id="keindahan-wrapper">
+      <div class="keindahan-container">
+        <img src="img/Keindahan Alam Img.png" alt="" />
+        <div class="keindahan-text">
+          <h5>KEINDAHAN ALAM</h5>
+          <h1>
+            Keindahan alam yang di akui Dunia yang dapat ditemukan di Indonesia.
+          </h1>
+          <p>
+            Keindahan alam yang dimiliki Indonesia banyak di akui negara sebagai
+            negara terindah. Memiliki Pantai, Pegunungan, Tempat Bersejarah yang
+            dapat menjadi tujuan wisata kamu selanjutnya.
+          </p>
+
+          <div class="btn-all">
+            <a href="jelajahi.html" id="keindahan-btn"
+              >Selengkapnya
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="keberagaman-wrapper">
+      <div class="keberagaman-container">
+        <img src="img/Keberagaman Wisata Img.png" alt="" />
+        <div class="keberagaman-text">
+          <h5>KEBERAGAMAN WISATA</h5>
+          <h1>Beragam wisata alam yang menarik dan menjadi pilihanmu.</h1>
+          <p>
+            Beragam tempat wisata alam yang ditemukan di Indonesia dapat menjadi
+            pilihanmu untuk berpetualang dan menjelajahi indahnya Indonesia.
+          </p>
+
+          <div class="btn-all">
+            <a href="jelajahi.html" id="keindahan-btn"
+              >Selengkapnya
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-wrapper">
+      <div class="video-container">
+        <div class="video-text">
+          <h5>VIDEO WISATA INDONESIA</h5>
+          <h1>Jelajahi Destinasi Indonesia Lewat Video Ini</h1>
+          <p>
+            Video dibawah dibuat oleh Pesona Indonesia yang menampilkan
+            keindahan alam dan keberagaman destinasi wisata yang dapat di
+            jelajahi di Indonesia.
+          </p>
+        </div>
+        <iframe
+          src="https://www.youtube.com/embed/yXeDdH4nIZA?si=_HP1nchrOSUECVok"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="slider" class="pt-5">
+      <div class="container">
+        <div class="rekomendasi-text">
+          <h5>REKOMENDASI WISATA</h5>
+          <h1>Rekomendasi wisata agar perjalananmu jadi lebih seru!</h1>
+          <p>
+            Liburan bingung mau kemana? Ini beberapa rekomendasi destinasi di
+            Indonesia yang dapat membuat petualanganmu jadi lebih seru dan
+            tentunya menyenangkan.
+          </p>
+        </div>
+        <div class="slider">
+          <div class="owl-carousel">
+            <div class="slider-card">
+              <a href="jelajahi/candi_borobudur.html"
+                ><div
+                  class="d-flex justify-content-center align-items-center mb-4"
+                >
+                  <img src="img/Borobudur - 1.png" alt="" />
+                </div>
+                <h5 class="mb-0 text-center">Candi Borobudur</h5>
+                <p class="text-center p-4">Jawa Tengah</p></a
+              >
+            </div>
+            <div class="slider-card">
+              <a href="jelajahi/gunung_bromo.html">
+                <div
+                  class="d-flex justify-content-center align-items-center mb-4"
+                >
+                  <img src="img/Gunung Bromo - 1.jpg" alt="" />
+                </div>
+                <h5 class="mb-0 text-center">Gunung Bromo</h5>
+                <p class="text-center p-4">Jawa Timur</p></a
+              >
+            </div>
+            <div class="slider-card">
+              <a href="jelajahi/jatim_park_2.html"
+                ><div
+                  class="d-flex justify-content-center align-items-center mb-4"
+                >
+                  <img src="img/Jatim Park 2 - 1.jpg" alt="" />
+                </div>
+                <h5 class="mb-0 text-center">Jatim Park 2</h5>
+                <p class="text-center p-4">Jawa Timur</p></a
+              >
+            </div>
+            <div class="slider-card">
+              <a href="jelajahi/pura_besakih.html">
+                <div
+                  class="d-flex justify-content-center align-items-center mb-4"
+                >
+                  <img src="img/Pura Besakih - 2.jpg" alt="" />
+                </div>
+                <h5 class="mb-0 text-center">Pura Besakih</h5>
+                <p class="text-center p-4">Bali</p></a
+              >
+            </div>
+            <div class="slider-card">
+              <a href="jelajahi/raja_ampat.html">
+                <div
+                  class="d-flex justify-content-center align-items-center mb-4"
+                >
+                  <img src="img/Raja Ampat - 2.jpg" alt="" />
+                </div>
+                <h5 class="mb-0 text-center">Raja Ampat</h5>
+                <p class="text-center p-4">Papua Barat</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fitur-wrapper">
+      <div class="fitur-container">
+        <img src="img/Kelebihan Eksplorin.png" alt="" />
+        <div class="fitur-text">
+          <h5>FITUR EKSPLORIN</h5>
+          <h1>Apa Kelebihan Eksplorin?</h1>
+          <p>
+            Eksplorin menyediakan beberapa fitur spesial yang dapat membantu
+            kamu agar mendapat pengalaman liburan yang menyenangkan di
+            Indonesia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="jelajahi-wrapper">
+      <div class="jelajahi-container">
+        <img src="img/Fitur Jelajahi.png" alt="" />
+        <div class="jelajahi-text">
+          <h5>FITUR JELAJAHI</h5>
+          <h1>Jelajahi membantumu memilih tempat wisata di Indonesia.</h1>
+          <p>
+            Eksplorin memiliki fitur Jelajahi yang dapat membantumu untuk
+            memilih tempat wisata di Indonesia yang dapat membuat pengalaman
+            wisatamu jadi lebih seru!
+          </p>
+
+          <div class="btn-all">
+            <a href="jelajahi.html" id="keindahan-btn"
+              >Selengkapnya
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinasi-wrapper">
+      <div class="destinasi-container">
+        <img src="img/Fitur Destinasi Wisata.png" alt="" />
+        <div class="destinasi-text">
+          <h5>FITUR WISATA DAERAH</h5>
+          <h1>
+            Wisata Daerah memudahkanmu menemukan tempat wisata di seluruh daerah
+            Indonesia.
+          </h1>
+          <p>
+            Wisata Daerah memudahkan anda untuk menemukan berbagai macam tempat
+            wisata di Indonesia yang sesuai dengan selera anda.
+          </p>
+
+          <div class="btn-all">
+            <a href="wisata_daerah.html" id="keindahan-btn"
+              >Selengkapnya
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="testimoni-wrapper">
+      <div class="testimonials-section">
+        <!-- Section Header Starts -->
+        <header class="section-header">
+          <h1>Pendapat mereka tentang Eksplorin!</h1>
+        </header>
+        <!-- Section Header Ends -->
+
+        <!-- Owl Carousel Slider Starts -->
+        <div class="owl-carousel owl-theme testimonials-container">
+          <!-- Item1 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>
+                Eksplorin merupakan website yang sangat bagus. Sangat membantu
+                saya dan keluarga saat berliburan di Jawa.
+              </p>
+              <div class="profile">
+                <div class="profile-image">
+                  <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="profile-desc">
+                  <span>Muhammad Rahyan Noorfauzan</span>
+                  <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- Item1 Ends -->
+
+          <!-- Item2 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>
+                Websitenya sangat mudah dipahami, dan memiliki penjelasan wisata
+                yang menarik. Liburan keluargaku jadi lebih seru berkat
+                Eksplorin!
+              </p>
+              <div class="profile">
+                <div class="profile-image">
+                  <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="profile-desc">
+                  <span>Daffa Fakhir</span>
+                  <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- Item2 Ends -->
+
+          <!-- Item3 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>
+                Saat berlibur di Bali, aku dan temanku sangat kesulitan untuk
+                mencari tempat wisata. Akhirnya kami menggunakan Eksplorin yang
+                membantu perjalanan wisata kami.
+              </p>
+              <div class="profile">
+                <div class="profile-image">
+                  <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="profile-desc">
+                  <span>Ugustiningtyas Supriatno</span>
+                  <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- Item3 Ends -->
+
+          <!-- Item4 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>
+                Websitenya menarik dan memberikan informasi yang bagus dan juga
+                lengkap mengenai tempat wisata di Indonesia.
+              </p>
+              <div class="profile">
+                <div class="profile-image">
+                  <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="profile-desc">
+                  <span>Muhammad Ibrahim</span>
+                  <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- Item4 Ends -->
+
+          <!-- Item5 Starts -->
+          <div class="item testimonial-card">
+            <main class="test-card-body">
+              <div class="quote">
+                <i class="fa fa-quote-left"></i>
+                <!-- <h2>Awesome Coding</h2> -->
+              </div>
+              <p>
+                Website ini sangat bagus. Memudahkan saya dan keluarga saat
+                ingin liburan di Candi Borobudur serta informasi yang diberikan
+                sangat mudah dipahami.
+              </p>
+              <div class="profile">
+                <div class="profile-image">
+                  <i class="fa fa-user-circle"></i>
+                </div>
+                <div class="profile-desc">
+                  <span>Faiz Febrianto</span>
+                  <div class="ratings">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+          <!-- Item5 Ends -->
+        </div>
+        <!-- Owl Carousel Slider Ends -->
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-left">
+            <a href="./index.html">
+              <img src="./img/Logo Ekslorin - White.png" alt="" />
+              <h2>Eksplorin</h2>
+            </a>
+          </div>
+          <div class="footer-lcenter">
+            <ul>
+              <span>Menu Eksplorin</span>
+              <li><a href="./index.html">Beranda</a></li>
+              <li><a href="./jelajahi.html">Jelajahi</a></li>
+              <li><a href="./wisata_daerah.html">Wisata Daerah</a></li>
+              <li><a href="./tentang.html">Tentang</a></li>
+              <li><a href="./kontak.html">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-rcenter">
+            <ul>
+              <span>Kategori Wisata</span>
+              <li><a href="./jelajahi.html">Pantai</a></li>
+              <li><a href="./jelajahi.html">Pulau</a></li>
+              <li><a href="./jelajahi.html">Pegunungan</a></li>
+              <li><a href="./jelajahi.html">Sejarah</a></li>
+              <li><a href="./jelajahi.html">Taman</a></li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <ul>
+              <span>Hubungi Kami</span>
+              <li>
+                <a href="mailto:eksplorinid@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  eksplorinid@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+0411865677">
+                  <i class="fa fa-phone"></i>
+                  (0411)865677
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <a href="https://maps.app.goo.gl/PW5fg9QEQZSFn8hp8">
+                    Jalan Daeng Tata Raya Parang Tambung, Mannuruki, Kec.
+                    Tamalate, Kota Makassar, Sulawesi Selatan 90224</a
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright © 2024 Created by Technocrates</p>
+          <div class="socmed-eksplorin">
+            <a href="https://www.facebook.com/"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/eksplorin_id"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.x.com/"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- CDN Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery & Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <!-- Jquery & Testimoni Carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/owl.js"></script>
+
+    <!-- Link To Custom Script File -->
+    <script src="js/script.js"></script>
+    <script src="js/navbar-search.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+  </body>
+</html>

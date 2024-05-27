@@ -1,0 +1,1995 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "sans-serif";
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background-image: url("../img/Hero\ Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: 50%;
+}
+.btn-all {
+  display: flex;
+  align-items: center;
+  color: #264e50;
+}
+.btn-all a {
+  margin-right: 0.5rem;
+  transition: 0.5s;
+  color: #264e50;
+  text-decoration: none;
+}
+#keindahan-btn {
+  position: relative;
+}
+#keindahan-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #264e50;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@media (hover: hover) and (pointer: fine) {
+  #keindahan-btn:hover::before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+.btn-all a:hover {
+  margin-right: 1rem;
+  transition: 0.5s;
+}
+/* Navbar */
+nav.navbar {
+  position: fixed;
+  width: 90%;
+  background-color: #ffffff26;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-top: 2rem;
+  border-color: #ffffff;
+  backdrop-filter: blur(15px) brightness(100%);
+  -webkit-backdrop-filter: blur(15px) brightness(100%);
+  transition: 0.5s;
+  top: 0%;
+  left: 5%;
+  z-index: 10;
+  transform: translate(0%, -5%);
+}
+/* Scroll Navbar */
+nav.sticky {
+  background-color: #fff;
+  box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: auto auto;
+  border-radius: 0;
+  transition: 0.5s;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  transform: translate(0%, 0%);
+}
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+nav .container-fluid a {
+  width: 5%;
+}
+nav .container-fluid a img {
+  width: 80%;
+}
+nav .container-fluid .navbar-collapse ul li a {
+  width: 100%;
+}
+nav.sticky #custom-search-input {
+  border: 1px solid #e4e4e4;
+}
+
+#custom-search-input {
+  padding: 1px;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#custom-search-input input {
+  border: 0;
+  box-shadow: none;
+  background-color: rgb(255, 255, 255, 0);
+}
+
+#custom-search-input button {
+  background: none;
+  box-shadow: none;
+  margin: 2px 0 0 0;
+  border: 0;
+  color: #666666;
+  padding: 0 10px;
+  border-left: solid 1px #e4e4e4;
+  border-radius: 0;
+}
+
+#custom-search-input button:hover {
+  border: 0;
+  box-shadow: none;
+  border-left: solid 1px #ccc;
+}
+
+#custom-search-input .fa-magnifying-glass {
+  font-size: 18px;
+}
+#searchResult {
+  list-style: none;
+  padding: 0;
+  display: none; /* Sembunyikan dropdown secara default */
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: scroll;
+  padding: 0.2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 0 0 10px 10px;
+}
+
+#searchResult li {
+  background-color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#searchResult li:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+/* Hero Section */
+.hero-wrapper {
+  width: 100%;
+  padding: 9rem 0 3rem 0;
+}
+.hero-wrapper .hero-container {
+  width: 50%;
+  margin: auto auto;
+  text-align: center;
+  color: #fff;
+}
+.hero-wrapper .hero-container .hero-text h1 {
+  width: 80%;
+  text-align: center;
+  margin: auto auto;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero-wrapper .hero-container .hero-text h5 {
+  font-size: 1.2rem;
+}
+.hero-wrapper .hero-container .hero-text p {
+  padding-top: 1.5rem;
+  font-size: 1.1rem;
+  margin: auto auto;
+  font-weight: 100;
+}
+.hero-wrapper .hero-container .hero-text {
+  padding-bottom: 2rem;
+}
+.hero-container a {
+  background-color: #264e50;
+  color: #fff;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+svg {
+  transition: all 0.5s linear;
+  margin-left: 0.5rem;
+}
+.hero-btn:hover{
+  background-color: #1e3a3b;
+}
+.hero-btn:hover svg {
+  transform: rotate(90deg);
+}
+
+/* Keindahan Alam Section */
+.keindahan-wrapper {
+  width: 100%;
+  padding: 4.5rem 0;
+}
+.keindahan-wrapper .keindahan-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto auto;
+}
+.keindahan-wrapper .keindahan-container img {
+  width: 50%;
+}
+.keindahan-wrapper .keindahan-container .keindahan-text {
+  width: 47%;
+}
+.keindahan-wrapper .keindahan-container .keindahan-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.keindahan-wrapper .keindahan-container .keindahan-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.keindahan-wrapper .keindahan-container .keindahan-text a {
+  text-decoration: none;
+  color: #264e50;
+}
+/* Keberagaman Wisata Section */
+.keberagaman-wrapper {
+  width: 100%;
+  padding: 2rem 0;
+}
+.keberagaman-wrapper .keberagaman-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: auto auto;
+}
+.keberagaman-wrapper .keberagaman-container img {
+  width: 45%;
+}
+.keberagaman-wrapper .keberagaman-container .keberagaman-text {
+  width: 47%;
+}
+.keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Video Section */
+.video-wrapper {
+  width: 100%;
+  background-color: #f6f5f1;
+  padding: 2rem 0;
+}
+.video-wrapper .video-container {
+  width: 90%;
+  margin: auto auto;
+  text-align: center;
+}
+.video-wrapper .video-container .video-text {
+  width: 90%;
+  margin: auto auto;
+}
+.video-wrapper .video-container .video-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.video-wrapper .video-container .video-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.video-wrapper .video-container iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 550px;
+}
+
+/* Rekomendasi Section */
+#slider {
+  padding: 3rem 0;
+  width: 100%;
+}
+#slider .container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: auto auto;
+  align-items: center;
+  justify-content: space-between;
+}
+#slider .container .rekomendasi-text {
+  width: 45%;
+}
+.rekomendasi-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.rekomendasi-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.slider {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.15);
+  opacity: 1;
+}
+.slider-card {
+  background: #fff;
+  margin: 50px 10px 90px 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+  transform: scale(0.9);
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.slider-card a {
+  text-decoration: none;
+}
+.slider-card img {
+  border-radius: 5px 5px 0px 0px;
+}
+.slider-card h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #264e50;
+}
+.slider-card p {
+  font-size: 14px;
+  color: #767a86;
+}
+section#slider .container .slider .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  top: calc(50% - 25px);
+  left: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+section#slider .container .slider .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  top: calc(50% - 25px);
+  right: 0;
+  opacity: 1;
+  font-size: 30px !important;
+  z-index: 1;
+}
+section#slider .container .slider .owl-carousel .owl-dots {
+  text-align: center;
+}
+section#slider .container .slider .owl-carousel .owl-dots .owl-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background: #ccc !important;
+  margin-left: 3px;
+  margin-right: 3px;
+  outline: none;
+}
+section#slider .container .slider .owl-carousel .owl-dots .owl-dot.active {
+  background: #264e50 !important;
+}
+/* Fitur Section */
+.fitur-wrapper {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #f6f5f1;
+}
+.fitur-wrapper .fitur-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto auto;
+}
+.fitur-wrapper .fitur-container img {
+  width: 45%;
+}
+.fitur-wrapper .fitur-container .fitur-text {
+  width: 53%;
+}
+.fitur-wrapper .fitur-container .fitur-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.fitur-wrapper .fitur-container .fitur-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Fitur Jelajahi */
+.jelajahi-wrapper {
+  width: 100%;
+  padding: 1rem 0;
+}
+.jelajahi-wrapper .jelajahi-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: auto auto;
+}
+.jelajahi-wrapper .jelajahi-container img {
+  width: 45%;
+}
+.jelajahi-wrapper .jelajahi-container .jelajahi-text {
+  width: 50%;
+}
+.jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Fitur Destinasi */
+.destinasi-wrapper {
+  width: 100%;
+  padding: 1rem 0;
+}
+.destinasi-wrapper .destinasi-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: auto auto;
+}
+.destinasi-wrapper .destinasi-container img {
+  width: 45%;
+}
+.destinasi-wrapper .destinasi-container .destinasi-text {
+  width: 50%;
+}
+.destinasi-wrapper .destinasi-container .destinasi-text h5 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #264e50;
+}
+.destinasi-wrapper .destinasi-container .destinasi-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Testimoni Section */
+.testimoni-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f5f1;
+  padding: 2rem 0;
+}
+.testimonials-section {
+  width: 100%;
+  padding: 0px 8%;
+}
+.testimonials-section .section-header {
+  text-align: left;
+  margin: 30px auto 40px;
+}
+.section-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.testimonials-container {
+  /* position: relative; */
+  width: 90%;
+  margin: auto auto;
+}
+.testimonials-container .testimonial-card {
+  padding: 20px;
+}
+.testimonial-card .test-card-body {
+  background-color: #fff;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+  padding: 20px;
+  border-radius: 5px;
+}
+.test-card-body .quote {
+  display: flex;
+  align-items: center;
+}
+.test-card-body .quote i {
+  font-size: 55px;
+  color: #efefef;
+  margin-right: 20px;
+}
+.test-card-body p {
+  margin: 10px 0px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #767a86;
+}
+.test-card-body .ratings i {
+  font-size: 12px;
+  color: #f0bf6a;
+  cursor: pointer;
+}
+.testimonial-card .profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.profile .profile-image {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.profile .profile-image i {
+  font-size: 2.5rem;
+  color: #dadada;
+}
+.profile .profile-desc {
+  display: flex;
+  flex-direction: column;
+}
+.profile-desc span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #264e50;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav {
+  position: absolute;
+  right: 20px;
+  top: -100px;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav button {
+  border-radius: 50% !important;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav .owl-prev i,
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav .owl-next i {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #f6f5f1;
+  color: #264e50;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid #264e50;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav .owl-prev i:hover,
+.testimoni-wrapper .testimonials-section .owl-theme .owl-nav .owl-next i:hover {
+  background-color: #214244 !important;
+  color: #e9e9e9;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-dots {
+  margin-top: 15px;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-dots .owl-dot span {
+  background-color: #767a86 !important;
+  padding: 6px !important;
+}
+.testimoni-wrapper .testimonials-section .owl-theme .owl-dot.active span {
+  background-color: #264e50 !important;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #264e50;
+  padding: 2rem;
+}
+.footer-container {
+  width: 90%;
+  margin: auto auto;
+  color: #fff;
+}
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  border-bottom: 1px solid #767a86;
+}
+.footer-left {
+  width: 15%;
+}
+.footer-left a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-left a img {
+  width: 20%;
+  margin-right: 0.5rem;
+}
+.footer-left a h2 {
+  margin-bottom: 0;
+}
+.footer-lcenter {
+  width: 23%;
+}
+.footer-rcenter {
+  width: 23%;
+}
+.footer-right {
+  width: 25%;
+}
+.footer-lcenter span,
+.footer-rcenter span,
+.footer-right span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.footer-lcenter ul li,
+.footer-rcenter ul li,
+.footer-right ul li {
+  list-style: none;
+  margin: 1rem 0;
+}
+.footer-lcenter ul li a,
+.footer-rcenter ul li a,
+.footer-right ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+.footer-right ul li a {
+  display: flex;
+  align-items: center;
+}
+.footer-right ul li a i {
+  margin-right: 0.5rem;
+}
+.footer-container ul li a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.footer-bottom .socmed-eksplorin {
+  width: 7%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-bottom p {
+  font-size: 12px;
+  font-weight: 200;
+}
+.footer-bottom .socmed-eksplorin {
+  font-size: 16px;
+}
+.footer-bottom .socmed-eksplorin a {
+  color: #fff;
+}
+/* ======= responsive tablet ======= */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    height: 55vh;
+  }
+  .hero-wrapper {
+    width: 100%;
+    padding: 9rem 0 3rem 0;
+  }
+  .hero-wrapper .hero-container {
+    width: 50%;
+    margin: auto auto;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-wrapper .hero-container .hero-text h1 {
+    width: 80%;
+    text-align: center;
+    margin: auto auto;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero-wrapper .hero-container .hero-text h5 {
+    font-size: 1rem;
+  }
+  .hero-wrapper .hero-container .hero-text p {
+    padding-top: 1.5rem;
+    font-size: 1rem;
+    margin: auto auto;
+    font-weight: 100;
+  }
+  .keindahan-wrapper .keindahan-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .keindahan-wrapper .keindahan-container img {
+    width: 40%;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .keberagaman-wrapper {
+    width: 100%;
+    padding: 4rem 0;
+  }
+  .keberagaman-wrapper .keberagaman-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+  }
+  .keberagaman-wrapper .keberagaman-container img {
+    width: 40%;
+    margin-bottom: 2rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text {
+    width: 80%;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .video-wrapper .video-container {
+    width: 90%;
+    margin: auto auto;
+    text-align: center;
+  }
+  .video-wrapper .video-container .video-text {
+    width: 90%;
+    margin: auto auto;
+  }
+  .video-wrapper .video-container .video-text h5 {
+    margin-bottom: 1rem;
+    color: #264e50;
+  }
+  .video-wrapper .video-container .video-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .video-wrapper .video-container iframe {
+    width: 100%;
+  }
+  #slider {
+    padding: 3rem 0;
+    width: 100%;
+  }
+  #slider .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+  }
+  #slider .container .rekomendasi-text {
+    width: 100%;
+  }
+  .rekomendasi-text h5 {
+    margin-bottom: 1rem;
+  }
+  .rekomendasi-text h1 {
+    font-size: 2rem;
+  }
+  .slider {
+    width: 90%;
+  }
+  .slider .owl-item.active.center .slider-card {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  .slider-card {
+    background: #fff;
+    margin: 40px 10px 40px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    transform: scale(0.65);
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+  .slider-card h5 {
+    font-size: 24px;
+  }
+  .slider-card p {
+    font-size: 18px;
+  }
+  .fitur-wrapper .fitur-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .fitur-wrapper .fitur-container img {
+    width: 45%;
+  }
+  .fitur-wrapper .fitur-container .fitur-text {
+    width: 90%;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #264e50;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .jelajahi-wrapper .jelajahi-container img {
+    width: 40%;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .destinasi-wrapper .destinasi-container img {
+    width: 40%;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-card .test-card-body {
+    background-color: #fff;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .test-card-body .quote {
+    display: flex;
+    align-items: center;
+  }
+  .test-card-body .quote i {
+    font-size: 45px;
+    color: #efefef;
+    margin-right: 20px;
+  }
+  .test-card-body p {
+    margin: 10px 0px 15px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #767a86;
+  }
+  .test-card-body .ratings i {
+    font-size: 10px;
+    color: #f0bf6a;
+    cursor: pointer;
+  }
+  .testimonial-card .profile {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .profile .profile-image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+  }
+  .profile .profile-image i {
+    font-size: 2.5rem;
+    color: #dadada;
+  }
+  .profile .profile-desc {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-desc span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #264e50;
+  }
+  .owl-nav {
+    top: -85px;
+  }
+  .owl-nav .owl-prev i,
+  .owl-nav .owl-next i {
+    padding: 6px;
+    font-size: 14px;
+  }
+  .owl-dots .owl-dot span {
+    padding: 2.5px !important;
+  }
+  footer .footer-container {
+    width: 90%;
+    margin: auto auto;
+  }
+  footer .footer-container .footer-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-top .footer-left,
+  footer .footer-container .footer-top .footer-lcenter,
+  footer .footer-container .footer-top .footer-rcenter,
+  footer .footer-container .footer-top .footer-right {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .footer-left ul,
+  .footer-lcenter ul,
+  .footer-rcenter ul,
+  .footer-right ul {
+    padding-left: 0;
+  }
+  footer .footer-container .footer-top .footer-left img {
+    width: 7%;
+  }
+  .footer-lcenter ul li a,
+  .footer-rcenter ul li a,
+  .footer-right ul li a {
+    font-size: 16px;
+  }
+  .footer-bottom .socmed-eksplorin {
+    width: 12%;
+  }
+}
+
+/* ======= responsive smartphone ======= */
+
+@media screen and (min-width: 768px) and(max-width: 991px) {
+  .footer-bottom .socmed-eksplorin {
+    width: 10%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    height: 60vh;
+  }
+  .btn-all {
+    font-size: 14px;
+  }
+  .hero-wrapper {
+    width: 100%;
+    padding: 7rem 0 3rem 0;
+  }
+  .hero-wrapper .hero-container {
+    width: 75%;
+    margin: auto auto;
+    text-align: center;
+    color: #fff;
+  }
+  .hero-wrapper .hero-container .hero-text h1 {
+    width: 100%;
+    text-align: center;
+    margin: auto auto;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .hero-wrapper .hero-container .hero-text h5 {
+    font-size: 0.9rem;
+  }
+  .hero-wrapper .hero-container .hero-text p {
+    padding-top: 1.5rem;
+    font-size: 0.65rem;
+    margin: auto auto;
+    font-weight: 100;
+  }
+  .hero-wrapper .hero-container a {
+    font-size: 0.7rem;
+  }
+  .keindahan-wrapper .keindahan-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .keindahan-wrapper .keindahan-container img {
+    width: 60%;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h5 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .keberagaman-wrapper {
+    width: 100%;
+    padding: 4rem 0;
+  }
+  .keberagaman-wrapper .keberagaman-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+  }
+  .keberagaman-wrapper .keberagaman-container img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text {
+    width: 80%;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .video-wrapper .video-container {
+    width: 90%;
+    margin: auto auto;
+    text-align: center;
+  }
+  .video-wrapper .video-container .video-text {
+    width: 90%;
+    margin: auto auto;
+  }
+  .video-wrapper .video-container .video-text h5 {
+    margin-bottom: 0.9rem;
+    color: #264e50;
+  }
+  .video-wrapper .video-container .video-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .video-wrapper .video-container iframe {
+    width: 100%;
+    max-height: 250px;
+  }
+  /* rekomendasi */
+  #slider {
+    width: 100%;
+  }
+  #slider .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+  }
+  #slider .container .rekomendasi-text {
+    width: 100%;
+  }
+  .rekomendasi-text h5 {
+    margin-bottom: 1rem;
+  }
+  .rekomendasi-text h1 {
+    font-size: 2rem;
+  }
+  .slider {
+    width: 90%;
+  }
+  .slider .owl-item.active.center .slider-card {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  .slider-card {
+    background: #fff;
+    margin: 40px 10px 40px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.12);
+    transform: scale(0.65);
+    opacity: 0.5;
+    transition: all 0.5s;
+  }
+  .slider-card h5 {
+    font-size: 24px;
+  }
+  .slider-card p {
+    font-size: 18px;
+  }
+  .fitur-wrapper .fitur-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .fitur-wrapper .fitur-container img {
+    width: 55%;
+  }
+  .fitur-wrapper .fitur-container .fitur-text {
+    width: 90%;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h5 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    color: #264e50;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .jelajahi-wrapper .jelajahi-container img {
+    width: 60%;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: auto auto;
+  }
+  .destinasi-wrapper .destinasi-container img {
+    width: 60%;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h5 {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .section-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .owl-nav {
+    display: none;
+  }
+  .owl-dots .owl-dot span {
+    padding: 1.5px !important;
+  }
+  footer .footer-container {
+    width: 100%;
+    margin: auto auto;
+  }
+  footer .footer-container .footer-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-container .footer-top .footer-left,
+  footer .footer-container .footer-top .footer-lcenter,
+  footer .footer-container .footer-top .footer-rcenter,
+  footer .footer-container .footer-top .footer-right {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .footer-left ul,
+  .footer-lcenter ul,
+  .footer-rcenter ul,
+  .footer-right ul {
+    padding-left: 0;
+  }
+  footer .footer-container .footer-top .footer-left img {
+    width: 8%;
+  }
+  footer .footer-container .footer-top .footer-left h2 {
+    font-size: 1.5rem;
+  }
+  .footer-lcenter ul span,
+  .footer-rcenter ul span,
+  .footer-right ul span {
+    font-size: 18px;
+  }
+  .footer-lcenter ul li a,
+  .footer-rcenter ul li a,
+  .footer-right ul li a {
+    font-size: 14px;
+  }
+  .footer-bottom {
+    align-items: start;
+  }
+  .footer-bottom .socmed-eksplorin {
+    width: 17%;
+  }
+  .footer-bottom .socmed-eksplorin i {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body {
+    height: 53vh;
+  }
+  .slider-btn {
+    width: 17%;
+  }
+  .navbar .container-fluid a img {
+    width: 190%;
+  }
+  .hero-wrapper .hero-container .hero-text h5 {
+    font-size: 0.7rem;
+  }
+  .hero-wrapper .hero-container .hero-text h1 {
+    font-size: 1.5rem;
+  }
+  .keindahan-wrapper {
+    padding-top: 5.5rem;
+  }
+  .keindahan-wrapper .keindahan-container img {
+    width: 65%;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h5 {
+    font-size: 0.7rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h1 {
+    font-size: 1.5rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text p,
+  .keindahan-wrapper .keindahan-container .keindahan-text .btn-all a {
+    font-size: 12px;
+  }
+  .keindahan-wrapper {
+    padding-bottom: 3rem;
+  }
+  .keberagaman-wrapper {
+    padding-top: 3rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+    font-size: 0.7rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+    font-size: 1.5rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text p,
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all a {
+    font-size: 12px;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all svg {
+    width: 12px;
+  }
+  .video-wrapper .video-container .video-text h5 {
+    font-size: 0.7rem;
+  }
+  .video-wrapper .video-container .video-text h1 {
+    font-size: 1.5rem;
+  }
+  .video-wrapper .video-container .video-text p,
+  .video-wrapper .video-container .video-text .btn-all a {
+    font-size: 12px;
+  }
+  .video-wrapper .video-container iframe {
+    height: 250px;
+  }
+  #slider {
+    width: 100%;
+  }
+  #slider .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+  }
+  #slider .container .rekomendasi-text {
+    width: 100%;
+  }
+  #slider .container .rekomendasi-text h5 {
+    font-size: 0.7rem;
+  }
+  #slider .container .rekomendasi-text h1 {
+    font-size: 1.5rem;
+  }
+  #slider .container .rekomendasi-text p {
+    font-size: 12px;
+  }
+  #slider .container .slider-card {
+    margin: 20px 10px 0 10px;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h5 {
+    font-size: 0.7rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h1 {
+    font-size: 1.5rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text p {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+    font-size: 0.7rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+    font-size: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text p,
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all a {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all svg {
+    width: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text {
+    width: 80%;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h5 {
+    font-size: 0.7rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h1 {
+    font-size: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text p,
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all a {
+    font-size: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all svg {
+    width: 12px;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+  .test-card-body p {
+    font-size: 12px;
+  }
+  .testimonial-card .profile {
+    width: 100%;
+  }
+  .profile .profile-image {
+    width: auto;
+    margin-right: 15px;
+  }
+  .profile .profile-image i {
+    font-size: 2rem;
+  }
+  .profile .profile-desc {
+    width: 65%;
+  }
+  .profile-desc span {
+    font-size: 12px;
+  }
+  .owl-dots .owl-dot span {
+    padding: 2px !important;
+  }
+  .footer-bottom p {
+    font-size: 10px;
+    width: 70%;
+  }
+  .footer-bottom .socmed-eksplorin {
+    width: 16%;
+  }
+  .footer-bottom .socmed-eksplorin i {
+    font-size: 10px;
+  }
+  .footer-bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-left a img {
+    width: 100%;
+  }
+  .footer-left a h2 {
+    font-size: 14px;
+  }
+  .footer-lcenter span,
+  .footer-rcenter span,
+  .footer-right span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
+/* @media screen and (max-width: 576px) {
+  #card-slider {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  a.card {
+    width: 100%;
+    height: auto;
+    margin: 2rem 1rem;
+    background-color: #fff;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    text-align: center;
+    text-decoration: none;
+  }
+  a.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  a.card h6 {
+    color: #264e50;
+    margin-top: 1.5rem;
+    font-size: 18px;
+  }
+  a.card p {
+    color: #767a86;
+    font-size: 14px;
+  }
+  .slider-nav {
+    width: 85%;
+  }
+  .slider-btn {
+    width: 19%;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  #card-slider {
+    overflow: hidden;
+    position: relative;
+    width: 90%;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 300%; 
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  a.card {
+    width: 100%;
+    height: 200px;
+    margin: 2rem 1rem;
+    background-color: #fff;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+    text-align: center;
+    text-decoration: none;
+  }
+  a.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  a.card h6 {
+    color: #264e50;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+  a.card p {
+    color: #767a86;
+    font-size: 14px;
+  }
+  .slider-nav {
+    width: 85%;
+  }
+  .slider-btn {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 516px) and (max-width: 991px) {
+  nav .container-fluid a img {
+    width: 100%;
+  }
+  .hero-wrapper {
+    padding-top: 7rem;
+  }
+}
+@media screen and (min-width: 327px) and (max-width: 516px) {
+  .hero-wrapper .hero-container .hero-text h1 {
+    font-size: 1rem;
+  }
+  .hero-wrapper .hero-container .hero-text h5 {
+    font-size: 0.7rem;
+  }
+  .hero-wrapper .hero-container .hero-text p {
+    font-size: 12px;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h5 {
+    font-size: 0.7rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h1 {
+    font-size: 1.5rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text p,
+  .keindahan-wrapper .keindahan-container .keindahan-text .btn-all a {
+    font-size: 12px;
+  }
+  .keindahan-wrapper {
+    padding-bottom: 2rem;
+  }
+  .keberagaman-wrapper {
+    padding-top: 2rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+    font-size: 0.7rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+    font-size: 1.5rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text p,
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all a {
+    font-size: 12px;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all svg {
+    width: 12px;
+  }
+  .video-wrapper .video-container .video-text h5 {
+    font-size: 0.7rem;
+  }
+  .video-wrapper .video-container .video-text h1 {
+    font-size: 1.5rem;
+  }
+  .video-wrapper .video-container .video-text p,
+  .video-wrapper .video-container .video-text .btn-all a {
+    font-size: 12px;
+  }
+  .video-wrapper .video-container iframe {
+    height: 200px;
+  }
+  #card-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  a.card {
+    width: 100%;
+    height: 150px;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+  }
+  a.card img {
+    height: 60px;
+  }
+  a.card h6 {
+    font-size: 12px;
+  }
+  a.card p {
+    color: #767a86;
+    font-size: 10px;
+  }
+  .slider-nav {
+    width: 90%;
+  }
+  .slider-bullet {
+    width: 7px;
+    height: 7px;
+  }
+
+  .slider-btn {
+    width: 20%;
+  }
+
+  .slider-arrow i {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text h5 {
+    font-size: 0.7rem;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text h1 {
+    font-size: 1.5rem;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text p,
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text .btn-all a {
+    font-size: 12px;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text .btn-all svg {
+    width: 12px;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h5 {
+    font-size: 0.7rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h1 {
+    font-size: 1.5rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text p {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+    font-size: 0.7rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+    font-size: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text p,
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all a {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all svg {
+    width: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text {
+    width: 80%;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h5 {
+    font-size: 0.7rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h1 {
+    font-size: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text p,
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all a {
+    font-size: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all svg {
+    width: 12px;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+  .test-card-body p {
+    font-size: 12px;
+  }
+  .testimonial-card .profile {
+    width: 100%;
+    display: flex;
+  }
+  .profile .profile-image {
+    width: auto;
+    margin-right: 15px;
+  }
+  .profile .profile-image i {
+    font-size: 2.5rem;
+  }
+  .profile .profile-desc {
+    width: 65%;
+  }
+  .profile-desc span {
+    font-size: 12px;
+  }
+  .owl-dots .owl-dot span {
+    padding: 2px !important;
+  }
+  .footer-bottom p {
+    font-size: 10px;
+    width: 70%;
+  }
+  .footer-bottom .socmed-eksplorin {
+    width: 16%;
+  }
+  .footer-bottom .socmed-eksplorin i {
+    font-size: 10px;
+  }
+  .footer-bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-left a img {
+    width: 100%;
+  }
+  .footer-left a h2 {
+    font-size: 14px;
+  }
+  .footer-lcenter span,
+  .footer-rcenter span,
+  .footer-right span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .footer-lcenter ul li a,
+  .footer-rcenter ul li a,
+  .footer-right ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 326px) {
+  .hero-wrapper .hero-container .hero-text h1 {
+    font-size: 1rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h5 {
+    font-size: 0.7rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text h1 {
+    font-size: 1.5rem;
+  }
+  .keindahan-wrapper .keindahan-container .keindahan-text p,
+  .keindahan-wrapper .keindahan-container .keindahan-text .btn-all a {
+    font-size: 12px;
+  }
+  .keindahan-wrapper {
+    padding-bottom: 2rem;
+  }
+  .keberagaman-wrapper {
+    padding-top: 2rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h5 {
+    font-size: 0.7rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text h1 {
+    font-size: 1.5rem;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text p,
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all a {
+    font-size: 12px;
+  }
+  .keberagaman-wrapper .keberagaman-container .keberagaman-text .btn-all svg {
+    width: 12px;
+  }
+  .video-wrapper .video-container .video-text h5 {
+    font-size: 0.7rem;
+  }
+  .video-wrapper .video-container .video-text h1 {
+    font-size: 1.5rem;
+  }
+  .video-wrapper .video-container .video-text p,
+  .video-wrapper .video-container .video-text .btn-all a {
+    font-size: 12px;
+  }
+  .video-wrapper .video-container iframe {
+    height: 150px;
+  }
+  #card-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  a.card {
+    width: 100%;
+    height: 150px;
+    padding: 0.3rem 0.3rem 1rem 0.3rem;
+  }
+  a.card img {
+    height: 60px;
+  }
+  a.card h6 {
+    font-size: 12px;
+  }
+  a.card p {
+    color: #767a86;
+    font-size: 10px;
+  }
+  .slider-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .slider-btn {
+    width: 24%;
+  }
+
+  .slider-arrow i {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text h5 {
+    font-size: 0.7rem;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text h1 {
+    font-size: 1.5rem;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text p,
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text .btn-all a {
+    font-size: 12px;
+  }
+  #rekomendasi-wrapper .rekomendasi-container .rekomendasi-text .btn-all svg {
+    width: 12px;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h5 {
+    font-size: 0.7rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text h1 {
+    font-size: 1.5rem;
+  }
+  .fitur-wrapper .fitur-container .fitur-text p {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h5 {
+    font-size: 0.7rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text h1 {
+    font-size: 1.5rem;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text p,
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all a {
+    font-size: 12px;
+  }
+  .jelajahi-wrapper .jelajahi-container .jelajahi-text .btn-all svg {
+    width: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text {
+    width: 80%;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h5 {
+    font-size: 0.7rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text h1 {
+    font-size: 1.5rem;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text p,
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all a {
+    font-size: 12px;
+  }
+  .destinasi-wrapper .destinasi-container .destinasi-text .btn-all svg {
+    width: 12px;
+  }
+
+  .section-header h1 {
+    font-size: 1.5rem;
+  }
+  .test-card-body p {
+    font-size: 12px;
+  }
+  .testimonial-card .profile {
+    width: 100%;
+  }
+  .profile .profile-image {
+    width: auto;
+    margin-right: 15px;
+  }
+  .profile .profile-image i {
+    font-size: 2rem;
+  }
+  .profile .profile-desc {
+    width: 65%;
+  }
+  .profile-desc span {
+    font-size: 12px;
+  }
+  .owl-dots .owl-dot span {
+    padding: 2px !important;
+  }
+  .footer-bottom p {
+    font-size: 10px;
+    width: 70%;
+  }
+  .footer-bottom .socmed-eksplorin {
+    width: 16%;
+  }
+  .footer-bottom .socmed-eksplorin i {
+    font-size: 10px;
+  }
+  .footer-bottom {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .footer-left {
+    width: 100%;
+  }
+  .footer-left a img {
+    width: 100%;
+  }
+  .footer-left a h2 {
+    font-size: 14px;
+  }
+  .footer-lcenter span,
+  .footer-rcenter span,
+  .footer-right span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .footer-lcenter ul li a,
+  .footer-rcenter ul li a,
+  .footer-right ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+  }
+} */
